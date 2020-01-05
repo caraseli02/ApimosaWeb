@@ -5,11 +5,11 @@ $switch-speed: 1s;
 $slider-number: 5;
 $slider-width: 100% / $slider-number;
 
-$image1: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?crop=entropy&fit=crop&fm=jpg&h=600&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=800";
-$image2: "https://images.unsplash.com/photo-1456318019777-ccdc4d5b2396?crop=entropy&fit=crop&fm=jpg&h=600&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=800";
-$image3: "https://images.unsplash.com/photo-1428189923803-e9801d464d76?crop=entropy&fit=crop&fm=jpg&h=600&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=800";
-$image4: "https://images.unsplash.com/photo-1422393462206-207b0fbd8d6b?crop=entropy&fit=crop&fm=jpg&h=600&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=800";
-$image5: "https://images.unsplash.com/photo-1439736637365-748f240b24fb?crop=entropy&fit=crop&fm=jpg&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=800";
+$image1: "/_assets/img/work1.jpg";
+$image2: "/_assets/img/works3.jpg";
+$image3: "/_assets/img/works2.jpg";
+$image4: "/_assets/img/works4.jpg";
+$image5: "/_assets/img/works5.jpg";
 
 .outer-wrapper {
   width: 100%;
@@ -19,10 +19,8 @@ $image5: "https://images.unsplash.com/photo-1439736637365-748f240b24fb?crop=entr
 // basic styles
 .s-wrap {
   width: 100%;
-  padding-bottom: 50px;
-  padding-bottom: 55%;
+  height: 40vh;
   position: relative;
-  background-color: #efefe8;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 
@@ -46,16 +44,61 @@ $image5: "https://images.unsplash.com/photo-1439736637365-748f240b24fb?crop=entr
   .s-item {
     display: inline-block;
     width: $slider-width;
-    height: 90%;
+    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    position: relative;
+
+    .s-item__text {
+      display: block;
+      height: 50px;
+      position: absolute;
+      bottom: 15%;
+      left: 5%;
+      color:White;
+
+      .s-item__text__title {
+        background-color: rgba(0, 0, 0, 0.75);
+        font-size: 20px;
+        margin-bottom: 2.5%;
+        padding: 5px;
+      }
+      .s-item__text__description{
+        background-color: rgba(0, 0, 0, 0.75);
+        font-size: 16px;
+        padding:5px;
+      }
+    }
   }
 
   .s-item-1 {
     background-image: url($image1);
+
+    .s-item-1__text {
+      display: block;
+      height: 50px;
+      position: absolute;
+      bottom: 15%;
+      left: 5%;
+      color:White;
+
+      .s-item-1__text__title {
+        background-color: rgba(0, 0, 0, 0.75);
+        font-size: 20px;
+        margin-bottom: 5%;
+        padding: 5px;
+      }
+      .s-item-1__text__description{
+        background-color: rgba(0, 0, 0, 0.75);
+        font-size: 16px;
+        padding:5px;
+      }
+    }
   }
   .s-item-2 {
     background-image: url($image2);
+    position: relative;
   }
   .s-item-3 {
     background-image: url($image3);
@@ -71,7 +114,7 @@ $image5: "https://images.unsplash.com/photo-1439736637365-748f240b24fb?crop=entr
 .s-type-1 {
   .s-control {
     position: absolute;
-    bottom: 2%;
+    bottom: 0;
     left: 50%;
     text-align: center;
     transform: translateX(-50%);
@@ -92,7 +135,7 @@ $image5: "https://images.unsplash.com/photo-1439736637365-748f240b24fb?crop=entr
   .s-nav label {
     display: none;
     position: absolute;
-    top: 50%;
+    top: 45%;
     padding: 5px 10px;
     transform: translateY(-50%);
     cursor: pointer;

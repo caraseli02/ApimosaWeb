@@ -34,6 +34,7 @@ header {
         color: $black;
         background-color: $white;
         animation:colorChange 1.5s ease-in;
+        z-index: 2;
 
 
         @keyframes colorChange {
