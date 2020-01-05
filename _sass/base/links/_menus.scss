@@ -1,0 +1,128 @@
+// *****************************
+// +++++++ $MENUS ++++++
+// *****************************
+
+
+header {
+    font-family: arial, sans-serif;
+	@include flex-box;
+    background-color:$headerTxt;
+    height: 80px;
+    padding-left: 5%;
+
+    @include mediaQueries(tablet, down) {
+        padding-left: 2%;
+    }
+}
+.headerMenu {
+    width: 100px;
+    height: 80px;
+    @include mediaQueries(tablet, down) {
+        width: 50%;
+    }
+}
+.headerMenu__toggle {
+    display: none;
+    z-index: -1;
+    
+    &:checked ~ .headerMenu__body {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        color: $black;
+        background-color: $white;
+        animation:colorChange 1.5s ease-in;
+
+
+        @keyframes colorChange {
+            /* You could think of as "step 1" */
+            0% {
+              background-color: $headerTxt;
+            }
+            /* You could think of as "step 2" */
+            100% {
+              background-color: $white;
+            }
+          }
+        
+
+    }
+    &:checked ~ .headerMenu__toggle__text {
+
+        &::before {
+            transform:rotate(-50deg) translate(11.5px, 1px);
+        }
+        &::after {
+            transform:rotate(50deg) translate(13.5px, 1px);
+        }
+    }
+    
+}
+.headerMenu__body {
+    display: none;
+    @include mediaQueries(tablet, down) {
+        display: block;
+
+        color: $white;        
+    }
+}
+.headerMenu__toggle__text {
+	display: block;
+    padding: 16px;
+    height: 80px;
+	margin: 0 auto;
+	cursor: pointer;
+	color: $black;
+	//Instead of the line below you could use @include user-select($select)
+    user-select: none;
+    position: relative;
+
+    @include mediaQueries(tablet, down) {
+        display: none;
+    }
+    
+    
+    &::before {
+        content: '';
+        position:absolute;
+        width: 50px;
+        height: 6px;
+        background:#FCFCFC;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition:0.5s;
+        top: 45px;
+    }
+    &::after{
+        content: '';
+        position:absolute;
+        width: 50px;
+        height: 6px;
+        background:#FCFCFC;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition:0.5s;
+        top: 25px;
+    }
+}
+.headerMenu__list {
+	list-style: none;
+    padding: 16px;
+    height: 80px;
+    @include flex-box;
+	a {
+		margin:15px 5px;
+	}
+}
+a {
+	text-decoration: none;
+    color: $black;
+    margin:5px;
+    @include mediaQueries(tablet, down) {
+       color: $white;
+    }
+	&:hover {
+		color: $headerTxt;
+		text-decoration: underline;
+	}
+}
