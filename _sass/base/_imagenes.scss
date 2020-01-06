@@ -2,7 +2,7 @@
 // +++++++ $IMAGENES ++++++
 // *****************************
 $switch-speed: 1s;
-$slider-number: 5;
+$slider-number: 10;
 $slider-width: 100% / $slider-number;
 
 $image1: "/_assets/img/work1.jpg";
@@ -10,6 +10,11 @@ $image2: "/_assets/img/works3.jpg";
 $image3: "/_assets/img/works2.jpg";
 $image4: "/_assets/img/works4.jpg";
 $image5: "/_assets/img/works5.jpg";
+$image6: "/_assets/img/works6.jpg";
+$image7: "/_assets/img/works7.jpg";
+$image8: "/_assets/img/works8.jpg";
+$image9: "/_assets/img/works9.jpg";
+$image10: "/_assets/img/works10.jpg";
 
 .outer-wrapper {
   width: 100%;
@@ -63,6 +68,15 @@ $image5: "/_assets/img/works5.jpg";
         font-size: 20px;
         margin-bottom: 2.5%;
         padding: 5px;
+        position: relative;
+        cursor: pointer;
+        .link_servicios{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
       }
       .s-item__text__description{
         background-color: rgba(0, 0, 0, 0.75);
@@ -74,27 +88,6 @@ $image5: "/_assets/img/works5.jpg";
 
   .s-item-1 {
     background-image: url($image1);
-
-    .s-item-1__text {
-      display: block;
-      height: 50px;
-      position: absolute;
-      bottom: 15%;
-      left: 5%;
-      color:White;
-
-      .s-item-1__text__title {
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 20px;
-        margin-bottom: 5%;
-        padding: 5px;
-      }
-      .s-item-1__text__description{
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 16px;
-        padding:5px;
-      }
-    }
   }
   .s-item-2 {
     background-image: url($image2);
@@ -108,6 +101,22 @@ $image5: "/_assets/img/works5.jpg";
   }
   .s-item-5 {
     background-image: url($image5);
+  }
+  .s-item-6 {
+    background-image: url($image6);
+  }
+  .s-item-7 {
+    background-image: url($image7);
+    position: relative;
+  }
+  .s-item-8 {
+    background-image: url($image8);
+  }
+  .s-item-9 {
+    background-image: url($image9);
+  }
+  .s-item-10 {
+    background-image: url($image10);
   }
 }
 
@@ -139,6 +148,7 @@ $image5: "/_assets/img/works5.jpg";
     padding: 5px 10px;
     transform: translateY(-50%);
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.15);
 
     &::before,
     &::after {
@@ -146,7 +156,7 @@ $image5: "/_assets/img/works5.jpg";
       display: block;
       width: 8px;
       height: 24px;
-      background-color: #333;
+      background-color: $white;
     }
 
     &::before {
