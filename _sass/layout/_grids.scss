@@ -1,3 +1,141 @@
 // *****************************
 // +++++++ $GRIDS ++++++
 // *****************************
+
+.IndexGalery {
+  max-width: 80vw;
+  height: 200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "img1 img1 img1"
+    "img3 img2 img2";
+  margin-bottom: 50px;
+  position: relative;
+  font-family: arial;
+
+  &::before {
+    content: "GALERIA DE NUESTROS TRABAJOS";
+    position: absolute;
+    font-size: 20px;
+    color: $white;
+    font-weight: bold;
+    font-family: arial;
+    width: 180px;
+    height: 100px;
+    top: calc(50% - 50px);
+    left: calc(50% - 90px);
+    text-align: center;
+    border: 1px solid $white;
+    background-color: $bgTxtGalery;
+    padding-top: 20px;
+  }
+
+  .IndexGalery__link {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .IndexGalery__img1 {
+    grid-area: img1;
+    width: 100%;
+    height: 100%;
+    background-image: url(/_assets/img/works2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .IndexGalery__img2 {
+    grid-area: img2;
+    background-image: url(/_assets/img/works3.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .IndexGalery__img3 {
+    grid-area: img3;
+    background-image: url(/_assets/img/work1.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+// FOOTER GRID
+footer {
+  background-color: $headerBg;
+  padding: 2% 7%;
+  display: grid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50px 50px 135px 75px 220px;
+  grid-template-areas:
+    "NrTelefono NrTelefono NrTelefono"
+    "redes redes redes"
+    "Maps Maps Maps"
+    "Certification Certification Certification"
+    "Links Links Links";
+  grid-gap: 20px;
+
+  .telefono {
+    @include flex-box(flex-start, center);
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    grid-area: NrTelefono;
+    justify-self: center;
+    .icon__telefono {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  .redes {
+    grid-area: redes;
+    @include flex-box;
+    .red {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .location {
+    grid-area:Maps;
+    @include flex-box;
+    &__txt {
+      width: 110px;
+      height: 115px;
+      font-size: 20px;
+      font-weight: bold;
+      @include flex-box(center, center);
+    }
+  }
+  .certification {
+    grid-area: Certification;
+    width: 100%;
+    height: 75px;
+    @include flex-box(center, center);
+
+    .certification__img {
+      width: 200px;
+      height: 75px;
+      @include flex-box(center, center);
+    }
+  }
+  .Flinks {
+    grid-area: Links;
+    padding-bottom: 5%;
+    .Flink {
+      font-size: 20px;
+      font-weight: bold;
+      height: 50px;
+      @include flex-box(flex-start, center);
+      margin: 5px;
+      a {
+        height: 100%;
+        display: block;
+        @include flex-box(flex-start, center);
+      }
+    }
+  }
+}

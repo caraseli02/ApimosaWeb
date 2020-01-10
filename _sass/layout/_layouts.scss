@@ -1,3 +1,34 @@
 // *****************************
 // +++++++ $LAYOUTS ++++++
 // *****************************
+//Abaut Apimosa text and link to conosenos.html
+.Conocenos{
+    text-align: center;
+    margin:5% 10%;
+
+    .Conocenos__name{
+        font-size: 30px;
+        margin-bottom: 5%;
+        color: #1C2D49;
+    }
+
+    .Conocenos__description{
+        @extend .Conocenos__name;
+        font-size: 20px;
+        border-left: 2px solid #1C2D49;
+        padding-left: 5%;
+        text-align: justify;
+        letter-spacing: 5;
+    }
+
+    .Conocenos__link{
+        font-size: 20px;
+        @include flex-box(right);
+        
+
+        span{
+           border:1px solid #1C2D49;
+           padding:3% 5%;
+        }
+    }
+}

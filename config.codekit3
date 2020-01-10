@@ -755,6 +755,37 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/_assets/img/logoBig.png": {
+		"ft": 32768,
+		"iS": 92406,
+		"oA": 0,
+		"oAP": "/_assets/img/logoBig.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/_assets/img/logoBig.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_assets/img/logoBig.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/_assets/img/logoCal.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_assets/img/logoCal.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/_assets/img/logoCall.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -1187,6 +1218,14 @@
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
+		},
+	"/conocenos.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/conocenos.html",
+		"oF": 0
 		},
 	"/css/estilos.css": {
 		"aP": 1,

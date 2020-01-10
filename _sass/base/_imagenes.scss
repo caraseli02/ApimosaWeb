@@ -82,6 +82,7 @@ $image10: "/_assets/img/works10.jpg";
         background-color: rgba(0, 0, 0, 0.75);
         font-size: 16px;
         padding:5px;
+        transform:translate(10px, 0);
       }
     }
   }
@@ -233,3 +234,4 @@ $image10: "/_assets/img/works10.jpg";
     $j: $j + 1;
   }
 }
+
