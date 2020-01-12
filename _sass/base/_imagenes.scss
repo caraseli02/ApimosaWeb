@@ -40,10 +40,17 @@ $image10: "/_assets/img/works10.jpg";
     top: 0;
     left: 0;
     width: 100% * $slider-number;
-    height: 100%;
+    height: 40vh;
     font-size: 0;
     list-style: none;
     transition: transform $switch-speed;
+  }
+  // CSS for trabajos.html 
+  //2 ul in div 
+  //ading extra text for trabajos
+  .s-content__trabajos {
+    top: 267px;
+    height: 40vh;
   }
 
   .s-item {
@@ -85,8 +92,39 @@ $image10: "/_assets/img/works10.jpg";
         transform:translate(10px, 0);
       }
     }
-  }
+    .s-item__conocer {
+      @include flex-box(center, center);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top:0;
+      color:White;
 
+      .s-item__conocer__text{
+        background-color: rgba(0, 0, 0, 0.75);
+        font-size: 20px;
+        max-width: 65%;
+        max-height: 80%;
+        padding: 5px;
+        position: relative;
+        cursor: pointer;
+        .link_servicios{
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+  // IMG for conocenos
+  .c-galery{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+  }
   .s-item-1 {
     background-image: url($image1);
   }
@@ -119,6 +157,10 @@ $image10: "/_assets/img/works10.jpg";
   .s-item-10 {
     background-image: url($image10);
   }
+  
+}
+.container__trabajos{
+  height: 80vh;
 }
 
 .s-type-1 {
@@ -235,3 +277,9 @@ $image10: "/_assets/img/works10.jpg";
   }
 }
 
+// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
+// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
+// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
+// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
+// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
+// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS

@@ -757,7 +757,7 @@
 		},
 	"/_assets/img/logoBig.png": {
 		"ft": 32768,
-		"iS": 92406,
+		"iS": 71063,
 		"oA": 0,
 		"oAP": "/_assets/img/logoBig.png",
 		"oF": 0,
@@ -765,16 +765,6 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
-		},
-	"/_assets/img/logoBig.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "/_assets/img/logoBig.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 52780316221407,
-		"prP": 0
 		},
 	"/_assets/img/logoCal.svg": {
 		"ft": 2097152,
@@ -1255,6 +1245,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/trabajos.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/trabajos.html",
+		"oF": 0
 		}
 	},
 "hooks": [
