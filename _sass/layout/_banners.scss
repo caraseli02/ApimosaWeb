@@ -1,3 +1,179 @@
 // *****************************
 // +++++++ $BANNERS ++++++
 // *****************************
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+  }
+  
+  .popup {
+    margin: 40px auto;
+    padding: 0px;
+    background: #fff;
+    border-radius: 5px;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    transition: all 5s ease-in-out;
+
+    .popups-item-1 {
+        background-image: url($image1);
+      }
+
+    .popups-item {
+        display: inline-block;
+        width: 100%;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    
+        .popups-item__text {
+          display: block;
+          height: 50px;
+          position: absolute;
+          bottom: 15%;
+          left: 5%;
+          color: White;
+    
+          .popups-item__text__title {
+            background-color: rgba(0, 0, 0, 0.75);
+            font-size: 20px;
+            margin-bottom: 2.5%;
+            padding: 5px;
+            position: relative;
+            cursor: pointer;
+            .link_popups {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .popups-item__text__description {
+            background-color: rgba(0, 0, 0, 0.75);
+            font-size: 16px;
+            padding: 5px;
+            transform: translate(10px, 0);
+          }
+        }
+        .popups-item__popup {
+          @include flex-box(center, center, column);
+          position: absolute;
+          width: 100%;
+          height: 40vh;
+          top: 0;
+    
+          .popups-item__popup__text {
+            font-size: 30px;
+            max-width: 90%;
+            max-height: 80%;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            color: $txt;
+            font-weight: bold;
+            background-color: rgba($color: #ffffff, $alpha: 0.5);
+            border:0.5px solid $txt;;
+            cursor: pointer;
+            .link_popups {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .popups-item__popup-description {
+            position: relative;
+            text-align: center;
+            color: $white;
+            margin:0 auto;
+            width:90%;
+            @include flex-box(center, flex-start,column);
+            .link_popups {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+            }
+            .apimosa__popups{
+                display: block;
+                width: 90%;
+                height: 40px;
+                font-size: 1.1rem;
+                text-align: left;
+                line-height: 20px;
+                margin:5px 0;
+            }
+          }
+          .popups-item__img {
+            @include flex-box(space-around, center);
+            width: 100%;
+            height: 50%;
+            &__link {
+              display: block;
+              width: 50px;
+              height: 50px;
+              background-color: #000;
+              background-position: center;
+              background-size: cover;
+            }
+          }
+          @for $t from 1 through 4 {
+            .popups-item__img__link:nth-child(#{$t}) {
+              background-image: url(/_assets/img/works#{$t}.jpg);
+            }
+          }
+        }
+      }
+  }
+
+  .popups-item-description{
+      background-color: #000;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: -7px;
+    right: 10px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: $white;
+    z-index: 9;
+    padding:7px 15px;
+    margin: 0;
+    width: 50px;
+    height: 50px;
+  }
+  .popup .close:hover {
+    color: $color_mine_shaft_approx;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }

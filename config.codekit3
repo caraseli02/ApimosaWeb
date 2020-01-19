@@ -723,6 +723,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/_assets/img/fax.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_assets/img/fax.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/_assets/img/linkedin.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -878,6 +888,17 @@
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/_assets/img/work1.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/_assets/img/works1.jpg": {
+		"ft": 16384,
+		"iS": 133254,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_assets/img/works1.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -1066,19 +1087,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"/_sass/base/links/_enlaces.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 1,
-		"oAP": "/_sass/base/links/_enlaces.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"/_sass/base/links/_menus.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -1088,6 +1096,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/_sass/base/links/_menus.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/_sass/base/links/_servicios.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_sass/base/links/_servicios.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"/_sass/base/links/_trabajos.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/_sass/base/links/_trabajos.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -1217,6 +1251,14 @@
 		"oAP": "/conocenos.html",
 		"oF": 0
 		},
+	"/contactar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/contactar.html",
+		"oF": 0
+		},
 	"/css/estilos.css": {
 		"aP": 1,
 		"bl": 0,
@@ -1245,6 +1287,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/servicios.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/servicios.html",
+		"oF": 0
 		},
 	"/trabajos.html": {
 		"cB": 0,

@@ -2,13 +2,14 @@
 // +++++++ $LAYOUTS ++++++
 // *****************************
 //Abaut Apimosa text and link to conosenos.html
+//code in Index.html
 .magrin__conocenos{
     margin-bottom: 5%;
 }
 .Conocenos{
     text-align: center;
     margin:5% 10%;
-
+    
     .Conocenos__name{
         font-size: 30px;
         margin-bottom: 5%;
@@ -21,7 +22,7 @@
         border-left: 2px solid #1C2D49;
         padding-left: 5%;
         text-align: justify;
-        letter-spacing: 5;
+        line-height: 25px;
     }
 
     .Conocenos__link{
@@ -36,6 +37,3 @@
     }
 }
 
-.logoMain{
-    margin:5%;
-}

@@ -1,13 +1,19 @@
-// *****************************
-// +++++++ $IMAGENES ++++++
-// *****************************
 
-.outer-wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
+$switch-speed: 1s;
+$slider-number: 10;
+$slider-width: 100% / $slider-number;
 
-// basic styles
+$image1: "/_assets/img/work1.jpg";
+$image2: "/_assets/img/works3.jpg";
+$image3: "/_assets/img/works2.jpg";
+$image4: "/_assets/img/works4.jpg";
+$image5: "/_assets/img/works5.jpg";
+$image6: "/_assets/img/works6.jpg";
+$image7: "/_assets/img/works7.jpg";
+$image8: "/_assets/img/works8.jpg";
+$image9: "/_assets/img/works9.jpg";
+$image10: "/_assets/img/works10.jpg";
+
 .s-wrap {
   width: 100%;
   height: 40vh;
@@ -31,42 +37,44 @@
     list-style: none;
     transition: transform $switch-speed;
   }
-  // CSS for trabajos.html 
-  //2 ul in div 
-  //ading extra text for trabajos
-  // .s-content__trabajos {
-  //   top: 324px;
-  //   height: 30vh;
-  // }
+  .s-content__servicios {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 40vh;
+    left: 0;
+    width: 100% * $slider-number;
+    height: 30vh;
+    font-size: 0;
+    list-style: none;
+    transition: transform $switch-speed;
+  }
 
-  .s-item {
+  .servicios-item {
     display: inline-block;
     width: $slider-width;
-    height: 100%;
+    height: 40vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: relative;
 
-    .s-item__text {
+    .servicios-item__text {
       display: block;
       height: 50px;
       position: absolute;
       bottom: 15%;
       left: 5%;
-      color:White;
+      color: White;
 
-      .s-item__text__title {
+      .servicios-item__text__title {
         background-color: rgba(0, 0, 0, 0.75);
         font-size: 20px;
         margin-bottom: 2.5%;
         padding: 5px;
         position: relative;
         cursor: pointer;
-        border: 2.5px solid #fff;
-        animation: colorChange 5s infinite;
-        border-radius: 5px;
-        .link_servicios{
+        .link_servicios {
           position: absolute;
           left: 0;
           top: 0;
@@ -74,85 +82,126 @@
           height: 100%;
         }
       }
-      .s-item__text__description{
+      .servicios-item__text__description {
         background-color: rgba(0, 0, 0, 0.75);
         font-size: 16px;
-        padding:5px;
-        transform:translate(10px, 0);
+        padding: 5px;
+        transform: translate(10px, 0);
       }
     }
-
-    .s-item__conocer {
-      @include flex-box(center, center);
+    .servicios-item__servicio {
+      @include flex-box(center, center, column);
       position: absolute;
       width: 100%;
-      height: 100%;
-      top:0;
-      color:White;
+      height: 40vh;
+      top: 0;
 
-      .s-item__conocer__text{
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 20px;
-        max-width: 70%;
+      .servicios-item__servicio__text {
+        font-size: 30px;
+        max-width: 90%;
         max-height: 80%;
         padding: 5px;
         position: relative;
+        text-align: center;
+        color: $txt;
+        font-weight: bold;
+        background-color: rgba($color: #ffffff, $alpha: 0.5);
+        border:0.5px solid $txt;;
         cursor: pointer;
-        .link_servicios{
+        .link_servicios {
           position: absolute;
           left: 0;
           top: 0;
           width: 100%;
           height: 100%;
+        }
+      }
+      .servicios-item__servicio-description {
+        position: relative;
+        text-align: center;
+        color: $white;
+        margin:0 auto;
+        width:90%;
+        @include flex-box(center, flex-start,column);
+        .link_servicios {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+        .apimosa__servicios{
+            display: block;
+            width: 90%;
+            height: 40px;
+            font-size: 1.1rem;
+            text-align: left;
+            line-height: 20px;
+            margin:5px 0;
+        }
+      }
+      .servicios-item__img {
+        @include flex-box(space-around, center);
+        width: 100%;
+        height: 50%;
+        &__link {
+          display: block;
+          width: 50px;
+          height: 50px;
+          background-color: #000;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+      @for $t from 1 through 4 {
+        .servicios-item__img__link:nth-child(#{$t}) {
+          background-image: url(/_assets/img/works#{$t}.jpg);
         }
       }
     }
   }
+  .servicios-item-description {
+    background-color: #000;
+  }
   // IMG for conocenos
-  .c-galery{
+  .c-galery {
     display: block;
     width: 100%;
     height: 100%;
     background-position: center center;
   }
-  .s-item-1 {
+  .servicios-item-1 {
     background-image: url($image1);
   }
-  .s-item-2 {
+  .servicios-item-2 {
     background-image: url($image2);
+    position: relative;
   }
-  .s-item-3 {
+  .servicios-item-3 {
     background-image: url($image3);
   }
-  .s-item-4 {
+  .servicios-item-4 {
     background-image: url($image4);
   }
-  .s-item-5 {
+  .servicios-item-5 {
     background-image: url($image5);
   }
-  .s-item-6 {
+  .servicios-item-6 {
     background-image: url($image6);
   }
-  .s-item-7 {
+  .servicios-item-7 {
     background-image: url($image7);
     position: relative;
   }
-  .s-item-8 {
+  .servicios-item-8 {
     background-image: url($image8);
   }
-  .s-item-9 {
+  .servicios-item-9 {
     background-image: url($image9);
   }
-  .s-item-10 {
+  .servicios-item-10 {
     background-image: url($image10);
   }
-  
-}
-.container__trabajos {
-  height: 70vh;
-}
-.container__servicios{
-  height: 80vh;
 }
 
 .s-type-1 {
@@ -176,10 +225,10 @@
     }
   }
 
-  .s-nav label {
+  .s-servicio label {
     display: none;
     position: absolute;
-    top: 45%;
+    top: 50%;
     padding: 5px 10px;
     transform: translateY(-50%);
     cursor: pointer;
@@ -192,6 +241,7 @@
       width: 8px;
       height: 24px;
       background-color: $white;
+      margin: 0 10px;
     }
 
     &::before {
@@ -225,7 +275,7 @@
 
   @for $i from 1 through $slider-number {
     #s-#{$i}:checked {
-      & ~ .s-content {
+      & ~ .s-content__servicios {
         transform: translateX(-$slider-width * ($i - 1));
       }
 
@@ -233,54 +283,23 @@
         background-color: #333;
       }
 
-      & ~ .s-nav .s-nav-#{$i} {
+      & ~ .s-servicio .s-servicio-#{$i} {
         display: block;
       }
     }
   }
 }
 
-.s-type-2 {
-  .s-content {
-    animation: slider-animation 50s ease-in-out infinite;
+.logoMain {
+  margin: 5%;
 
-    &:hover {
-      animation-play-state: paused;
-    }
+  .title__servicios{
+    font-weight: bold;
+    margin:5% auto;
+    font-size: 25px;
+    text-align: center;
+    max-width: 80%;
+    @include flex-box(center, center);
+    color:$txt;
   }
 }
-
-@keyframes slider-animation {
-  $i: 0;
-  $j: 0;
-  $times: ($slider-number - 1) * 2;
-  @while $i < 100 {
-    #{$i}%,
-    #{$i + 7}% {
-      @if $i < 50 {
-        transform: translateX(-$slider-width * $j);
-      } @else {
-        transform: translateX(-$slider-width * ($times - $j));
-      }
-    }
-
-    $i: $i + 100 / $times;
-    $j: $j + 1;
-  }
-}
-
-@keyframes colorChange {
-  0% {border: 2.5px solid #fff;}
-  30% {border: 2.5px solid #fff;}
-  50% {border: 2.5px solid $azulLogo;}
-  70% {border: 2.5px solid #fff;}
-  100% {border: 2.5px solid #fff;}
-
-}
-
-// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
-// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
-// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
-// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
-// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS
-// TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS TRABAJOS

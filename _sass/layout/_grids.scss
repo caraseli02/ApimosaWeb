@@ -1,7 +1,7 @@
 // *****************************
 // +++++++ $GRIDS ++++++
 // *****************************
-
+// IMG GALERY of INDEX
 .IndexGalery {
   max-width: 80vw;
   height: 200px;
@@ -13,7 +13,7 @@
   margin-bottom: 50px;
   position: relative;
   font-family: arial;
-
+// Galery Text
   &::before {
     content: "GALERIA DE NUESTROS TRABAJOS";
     position: absolute;
@@ -30,7 +30,7 @@
     background-color: $bgTxtGalery;
     padding-top: 20px;
   }
-
+//Link for trabajos.html
   .IndexGalery__link {
     position: absolute;
     z-index: 10;
@@ -38,7 +38,7 @@
     height: 100%;
     display: block;
   }
-
+// IMAGES
   .IndexGalery__img1 {
     grid-area: img1;
     width: 100%;
@@ -68,15 +68,36 @@ footer {
   display: grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 135px 75px 220px;
+  grid-template-rows: 50px 50px 50px 135px 75px 220px;
   grid-template-areas:
     "NrTelefono NrTelefono NrTelefono"
+    "fax fax fax"
     "redes redes redes"
     "Maps Maps Maps"
     "Certification Certification Certification"
     "Links Links Links";
   grid-gap: 20px;
 
+  // Fax LINKS
+  .fax{
+    @include flex-box(flex-start, center);
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    grid-area: fax;
+    justify-self: center;
+
+    &:hover {
+      color: #ddd;
+  }
+    .icon__fax {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+  }
+
+  //Telefon LInks
   .telefono {
     @include flex-box(flex-start, center);
     height: 50px;
@@ -84,6 +105,10 @@ footer {
     font-size: 25px;
     grid-area: NrTelefono;
     justify-self: center;
+
+    &:hover {
+      color: $white;
+  }
     .icon__telefono {
       width: 50px;
       height: 50px;
@@ -91,6 +116,7 @@ footer {
     }
   }
 
+  // Social Media
   .redes {
     grid-area: redes;
     @include flex-box;
@@ -99,6 +125,7 @@ footer {
       height: 50px;
     }
   }
+  //Google MAPS
   .location {
     grid-area:Maps;
     @include flex-box;
@@ -110,6 +137,7 @@ footer {
       @include flex-box(center, center);
     }
   }
+  // IMG of Certification
   .certification {
     grid-area: Certification;
     width: 100%;
@@ -122,6 +150,7 @@ footer {
       @include flex-box(center, center);
     }
   }
+  // ACCESIBILIDAD POLITICAS, TERMINOS Y CONDICIONES
   .Flinks {
     grid-area: Links;
     padding-bottom: 5%;
