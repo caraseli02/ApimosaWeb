@@ -1281,11 +1281,6 @@ a {
 .popups-item-description {
   background-color: #000; }
 
-.popup h2 {
-  margin-top: 0;
-  color: #333;
-  font-family: Tahoma, Arial, sans-serif; }
-
 .popup .close {
   position: absolute;
   top: -7px;
@@ -1303,10 +1298,6 @@ a {
 
 .popup .close:hover {
   color: #333; }
-
-.popup .content {
-  max-height: 30%;
-  overflow: auto; }
 
 .IndexGalery {
   max-width: 80vw;
