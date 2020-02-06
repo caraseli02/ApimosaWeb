@@ -743,6 +743,16 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/_assets/img/locSevilla.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/_assets/img/locSevilla.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/_assets/img/logo copy.jpg": {
 		"ft": 16384,
 		"iS": 83681,
@@ -815,6 +825,17 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"/_assets/img/ohsas.jpg": {
+		"ft": 16384,
+		"iS": 12190,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/_assets/img/ohsas.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"/_assets/img/smartphone/@1x/*.jpg": {

@@ -138,6 +138,10 @@ $image10: "/_assets/img/works10.jpg";
             text-align: left;
             line-height: 20px;
             margin:5px 0;
+
+            @include mediaQueries(tablet, down) {
+              font-size: 1.5rem;
+            }
         }
       }
       .servicios-item__img {
@@ -151,6 +155,11 @@ $image10: "/_assets/img/works10.jpg";
           background-color: #000;
           background-position: center;
           background-size: cover;
+
+          @include mediaQueries(tablet, down) {
+            width: 100px;
+            height: 100px;
+          }
         }
       }
       @for $t from 1 through 4 {
@@ -292,7 +301,9 @@ $image10: "/_assets/img/works10.jpg";
 
 .logoMain {
   margin: 5%;
-
+  @include mediaQueries(tablet, down) {
+    display: none;
+  }
   .title__servicios{
     font-weight: bold;
     margin:5% auto;

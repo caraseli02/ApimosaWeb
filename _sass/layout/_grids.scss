@@ -1,6 +1,23 @@
 // *****************************
 // +++++++ $GRIDS ++++++
 // *****************************
+
+// GRIF FOR MAIN  MEDIAQUERI FOR TABLET
+main {
+  @include mediaQueries(tablet, down) {
+    display: grid;
+    grid-template-areas:
+      "slider slider"
+      "conosenos galery";
+    grid-gap: 20px;
+  }
+}
+.gapConocenos {
+  @include mediaQueries(tablet, down) {
+    grid-gap: 0px;
+  }
+}
+
 // IMG GALERY of INDEX
 .IndexGalery {
   max-width: 80vw;
@@ -13,7 +30,12 @@
   margin-bottom: 50px;
   position: relative;
   font-family: arial;
-// Galery Text
+
+  @include mediaQueries(tablet, down) {
+    width: 300px;
+    height: 230px;
+  }
+  // Galery Text
   &::before {
     content: "GALERIA DE NUESTROS TRABAJOS";
     position: absolute;
@@ -30,7 +52,7 @@
     background-color: $bgTxtGalery;
     padding-top: 20px;
   }
-//Link for trabajos.html
+  //Link for trabajos.html
   .IndexGalery__link {
     position: absolute;
     z-index: 10;
@@ -38,7 +60,7 @@
     height: 100%;
     display: block;
   }
-// IMAGES
+  // IMAGES
   .IndexGalery__img1 {
     grid-area: img1;
     width: 100%;
@@ -68,18 +90,34 @@ footer {
   display: grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 50px 135px 75px 220px;
+  grid-template-rows: 50px 50px 50px 50px 135px 100px 100px 75px  75px 220px;
   grid-template-areas:
     "NrTelefono NrTelefono NrTelefono"
     "fax fax fax"
+    "mail mail mail"
     "redes redes redes"
     "Maps Maps Maps"
+    "Maps2 Maps2 Maps2"
+    "Maps3 Maps3 Maps3"
     "Certification Certification Certification"
+    "Certification2 Certification2 Certification2"
     "Links Links Links";
   grid-gap: 20px;
 
+  @include mediaQueries(tablet, down) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 180px 80px 150px;
+    grid-template-areas:
+      "NrTelefono mail redes"
+      "fax mail redes"
+      "Maps Maps2 Maps3 "
+      "Certification . Certification2"
+      "Links Links Links";
+  }
+
   // Fax LINKS
-  .fax{
+  .fax {
     @include flex-box(flex-start, center);
     height: 50px;
     text-align: center;
@@ -89,7 +127,7 @@ footer {
 
     &:hover {
       color: #ddd;
-  }
+    }
     .icon__fax {
       width: 50px;
       height: 50px;
@@ -108,11 +146,33 @@ footer {
 
     &:hover {
       color: $white;
-  }
+    }
     .icon__telefono {
       width: 50px;
       height: 50px;
       margin-right: 10px;
+    }
+  }
+
+  .mail{
+    @include flex-box(center, center);
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    grid-area: mail;
+    justify-self: center;
+    @include mediaQueries(tablet, down){
+      @include flex-box(center, center, column);
+    }
+
+    &:hover {
+      color: #ddd;
+    }
+    .icon__mail {
+      font-size: 3rem;
+      margin-right: 5px;
+      display: block;
+      color: $black;
     }
   }
 
@@ -127,14 +187,80 @@ footer {
   }
   //Google MAPS
   .location {
-    grid-area:Maps;
+    grid-area: Maps;
     @include flex-box;
+    @include mediaQueries(tablet, down) {
+      @include flex-box(center, center,column);
+    }
     &__txt {
-      width: 110px;
+      width: 150px;
       height: 115px;
       font-size: 20px;
       font-weight: bold;
-      @include flex-box(center, center);
+      @include flex-box(flex-start, center);
+      @include mediaQueries(tablet, down) {
+        @include flex-box(center, center);
+        text-align: center;
+      }
+      margin-left: 5px;
+
+      .homemap {
+        margin-right: 5px;
+      }
+    }
+    &_sevilla {
+      max-width: 50%;
+      margin: 0;
+    }
+  }
+  .locationPMI {
+    grid-area: Maps2;
+    @include flex-box;
+    
+    @include mediaQueries(tablet, down) {
+      @include flex-box(center, center,column);
+
+    }
+    
+    &__txt {
+      width: 150px;
+      height: 115px;
+      font-size: 20px;
+      font-weight: bold;
+      @include flex-box(flex-start, center);
+      margin-left: 5px;
+      @include mediaQueries(tablet, down) {
+        @include flex-box(center, center);
+        text-align: center;
+      }
+    }
+  }
+  .locationPMI_link, .locationMalaga_link{
+    max-width: 50%;
+    margin:0;
+    @include mediaQueries(tablet, down) {
+      max-width: 50%;
+    }
+  }
+  .locationMalaga {
+    grid-area: Maps3;
+    @include flex-box;
+    
+    @include mediaQueries(tablet, down) {
+      @include flex-box(center, center,column);
+
+    }
+    &__txt {
+      width: 150px;
+      height: 115px;
+      font-size: 20px;
+      font-weight: bold;
+      @include flex-box(flex-start, center);
+      margin-left: 5px;
+      @include mediaQueries(tablet, down) {
+        @include flex-box(center, center);
+        text-align: center;
+      }
     }
   }
   // IMG of Certification
@@ -150,15 +276,35 @@ footer {
       @include flex-box(center, center);
     }
   }
+  .certification2 {
+    grid-area: Certification2;
+    width: 100%;
+    height: 75px;
+    @include flex-box(center, center);
+
+    .certification__img {
+      width: 200px;
+      height: 75px;
+      @include flex-box(center, center);
+    }
+  }
   // ACCESIBILIDAD POLITICAS, TERMINOS Y CONDICIONES
   .Flinks {
     grid-area: Links;
     padding-bottom: 5%;
+    @include mediaQueries(tablet, down) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
     .Flink {
       font-size: 20px;
       font-weight: bold;
       height: 50px;
       @include flex-box(flex-start, center);
+      @include mediaQueries(tablet, down) {
+        @include flex-box(center, center);
+      }
       margin: 5px;
       a {
         height: 100%;

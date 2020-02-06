@@ -29,6 +29,12 @@
     height: 80vh;
     position: relative;
     transition: all 5s ease-in-out;
+
+    @include mediaQueries(tablet, down) {
+      @include flex-box(center,center);
+      height:40vh;
+    }
+
     // IMGS for POPUPS CONTAINERS
     .popups-item-1 {
         background-image: url($image1);
@@ -43,6 +49,10 @@
         background-size: cover;
         background-position: center;
         position: relative;
+
+        @include mediaQueries(tablet, down) {
+          width: 49%;
+        }
     
         .popups-item__text {
           display: block;
@@ -153,6 +163,10 @@
   // Baground color for bottom text
   .popups-item-description{
       background-color: #000;
+      
+      @include mediaQueries(tablet, down) {
+        display: inline-block;
+      }
   }
   
   // Close Icon

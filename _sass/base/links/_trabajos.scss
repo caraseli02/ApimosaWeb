@@ -51,6 +51,10 @@ $image10: "/_assets/img/works10.jpg";
     font-size: 0;
     list-style: none;
     transition: transform $switch-speed;
+
+    @include mediaQueries(tablet, down) {
+      
+    }
   }
 
   .trabajos-item {
@@ -61,6 +65,10 @@ $image10: "/_assets/img/works10.jpg";
     background-size: cover;
     background-position: center;
     position: relative;
+
+    @include mediaQueries(tablet, down) {
+      
+    }
 
     .trabajos-item__text {
       display: block;
@@ -99,6 +107,10 @@ $image10: "/_assets/img/works10.jpg";
       height: 30vh;
       top: 0;
 
+      @include mediaQueries(tablet, down) {
+        height: 40vh;
+      }
+
       .trabajos-item__trabajo__text {
         color: $txt;
         font-size: 30px;
@@ -129,6 +141,11 @@ $image10: "/_assets/img/works10.jpg";
         text-align: center;
         color: $white;
         cursor: pointer;
+
+        @include mediaQueries(tablet, down) {
+          font-size: 1.5rem;
+        }
+        
         .link_servicios {
           position: absolute;
           left: 0;
@@ -148,6 +165,11 @@ $image10: "/_assets/img/works10.jpg";
           background-color: #000;
           background-position: center;
           background-size: cover;
+
+          @include mediaQueries(tablet, down) {
+            width: 100px;
+            height: 100px;
+          }
         }
       }
       @for $t from 1 through 4 {
@@ -230,6 +252,10 @@ $image10: "/_assets/img/works10.jpg";
     transform: translateY(-50%);
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.15);
+
+    @include mediaQueries(tablet, down) {
+      top: calc(40vh - 0px);
+    }
 
     &::before,
     &::after {

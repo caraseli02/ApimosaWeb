@@ -1,19 +1,36 @@
 // *****************************
 // +++++++ $LAYOUTS ++++++
 // *****************************
+body{
+    min-height: 100vh;
+    background: radial-gradient(circle, rgba(234,244,254,1) 0%, rgba(0,91,151,1) 100%);
+}
 //Abaut Apimosa text and link to conosenos.html
 //code in Index.html
 .magrin__conocenos{
     margin-bottom: 5%;
+
+    @include mediaQueries(tablet, down) {
+        margin-bottom:0;
+    }
 }
 .Conocenos{
     text-align: center;
     margin:5% 10%;
+    @include mediaQueries(tablet, down) {
+        margin:none;
+    }
+    @include mediaQueries(tablet, down) {
+        display: inline-block;
+        width: 300px;
+        margin:0 10%;
+        height: 250px;
+    }
     
     .Conocenos__name{
         font-size: 30px;
         margin-bottom: 5%;
-        color: #1C2D49;
+        color: $black;
     }
 
     .Conocenos__description{
@@ -28,11 +45,12 @@
     .Conocenos__link{
         font-size: 20px;
         @include flex-box(right);
-        
+        color:$black;
 
         a{
-           border:1px solid #1C2D49;
+           border:1px solid $black;
            padding:3% 5%;
+           color:$black;
         }
     }
 }
