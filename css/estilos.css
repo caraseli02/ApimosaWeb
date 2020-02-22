@@ -87,327 +87,41 @@ table {
   border-spacing: 0; }
 
 /* SCSS */
-.s-wrap {
+.title__trabajos {
   width: 100%;
-  height: 40vh;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden; }
-  .s-wrap > input {
-    display: none; }
-  .s-wrap .s-content {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1000%;
-    height: 40vh;
-    font-size: 0;
-    list-style: none;
-    transition: transform 1s; }
-  .s-wrap .s-content__trabajos {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 40vh;
-    left: 0;
-    width: 1000%;
-    height: 30vh;
-    font-size: 0;
-    list-style: none;
-    transition: transform 1s; }
-  .s-wrap .trabajos-item {
-    display: inline-block;
-    width: 10%;
-    height: 40vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative; }
-    .s-wrap .trabajos-item .trabajos-item__text {
-      display: block;
-      height: 50px;
-      position: absolute;
-      bottom: 15%;
-      left: 5%;
-      color: White; }
-      .s-wrap .trabajos-item .trabajos-item__text .trabajos-item__text__title {
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 20px;
-        margin-bottom: 2.5%;
-        padding: 5px;
-        position: relative;
-        cursor: pointer; }
-        .s-wrap .trabajos-item .trabajos-item__text .trabajos-item__text__title .link_servicios {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%; }
-      .s-wrap .trabajos-item .trabajos-item__text .trabajos-item__text__description {
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 16px;
-        padding: 5px;
-        transform: translate(10px, 0); }
-    .s-wrap .trabajos-item .trabajos-item__trabajo {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      width: 100%;
-      height: 30vh;
-      top: 0; }
-      @media (min-width: 767px) {
-        .s-wrap .trabajos-item .trabajos-item__trabajo {
-          height: 40vh; } }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__trabajo__text {
-        color: #1C2D49;
-        font-size: 30px;
-        max-width: 100%;
-        max-height: 80%;
-        padding: 5px;
-        position: relative;
-        text-align: center;
-        color: #1C2D49;
-        font-weight: bold;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: 0.5px solid #1C2D49; }
-        .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__trabajo__text .link_servicios {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%; }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__trabajo-description {
-        color: #1C2D49;
-        font-size: 20px;
-        max-width: 100%;
-        max-height: 80%;
-        padding: 5px;
-        position: relative;
-        text-align: center;
-        color: #fff;
-        cursor: pointer; }
-        @media (min-width: 767px) {
-          .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__trabajo-description {
-            font-size: 1.5rem; } }
-        .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__trabajo-description .link_servicios {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%; }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: 50%; }
-        .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img__link {
-          display: block;
-          width: 50px;
-          height: 50px;
-          background-color: #000;
-          background-position: center;
-          background-size: cover; }
-          @media (min-width: 767px) {
-            .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img__link {
-              width: 100px;
-              height: 100px; } }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img__link:nth-child(1) {
-        background-image: url(/_assets/img/works1.jpg); }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img__link:nth-child(2) {
-        background-image: url(/_assets/img/works2.jpg); }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img__link:nth-child(3) {
-        background-image: url(/_assets/img/works3.jpg); }
-      .s-wrap .trabajos-item .trabajos-item__trabajo .trabajos-item__img__link:nth-child(4) {
-        background-image: url(/_assets/img/works4.jpg); }
-  .s-wrap .trabajos-item-description {
-    background-color: #000; }
-  .s-wrap .c-galery {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center center; }
-  .s-wrap .trabajos-item-1 {
-    background-image: url("/_assets/img/work1.jpg"); }
-  .s-wrap .trabajos-item-2 {
-    background-image: url("/_assets/img/works3.jpg");
-    position: relative; }
-  .s-wrap .trabajos-item-3 {
-    background-image: url("/_assets/img/works2.jpg"); }
-  .s-wrap .trabajos-item-4 {
-    background-image: url("/_assets/img/works4.jpg"); }
-  .s-wrap .trabajos-item-5 {
-    background-image: url("/_assets/img/works5.jpg"); }
-  .s-wrap .trabajos-item-6 {
-    background-image: url("/_assets/img/works6.jpg"); }
-  .s-wrap .trabajos-item-7 {
-    background-image: url("/_assets/img/works7.jpg");
-    position: relative; }
-  .s-wrap .trabajos-item-8 {
-    background-image: url("/_assets/img/works8.jpg"); }
-  .s-wrap .trabajos-item-9 {
-    background-image: url("/_assets/img/works9.jpg"); }
-  .s-wrap .trabajos-item-10 {
-    background-image: url("/_assets/img/works10.jpg"); }
-
-.s-type-1 .s-control {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-  transition-timing-function: ease-out; }
-  .s-type-1 .s-control > label[class^="s-c-"] {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 10px;
-    border-radius: 50%;
-    border: 1px solid #999;
-    background-color: #efefe8;
-    cursor: pointer; }
-
-.s-type-1 .s-trabajo label {
-  display: none;
-  position: absolute;
-  top: calc(50% - 23px);
-  padding: 5px 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.15); }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  padding-top: 3%;
+  background: #fff; }
   @media (min-width: 767px) {
-    .s-type-1 .s-trabajo label {
-      top: calc(40vh - 0px); } }
-  .s-type-1 .s-trabajo label::before, .s-type-1 .s-trabajo label::after {
-    content: "";
-    display: block;
-    width: 8px;
-    height: 24px;
-    background-color: #fff;
-    margin: 0 10px; }
-  .s-type-1 .s-trabajo label::before {
-    margin-bottom: -12px; }
-  .s-type-1 .s-trabajo label.left {
-    left: 20px; }
-    .s-type-1 .s-trabajo label.left::before {
-      transform: rotate(45deg); }
-    .s-type-1 .s-trabajo label.left::after {
-      transform: rotate(-45deg); }
-  .s-type-1 .s-trabajo label.right {
-    right: 20px; }
-    .s-type-1 .s-trabajo label.right::before {
-      transform: rotate(-45deg); }
-    .s-type-1 .s-trabajo label.right::after {
-      transform: rotate(45deg); }
+    .title__trabajos {
+      font-size: 3em; } }
 
-.s-type-1 #s-1:checked ~ .s-content__trabajos {
-  transform: translateX(0%); }
-
-.s-type-1 #s-1:checked ~ .s-control .s-c-1 {
-  background-color: #333; }
-
-.s-type-1 #s-1:checked ~ .s-trabajo .s-trabajo-1 {
-  display: block; }
-
-.s-type-1 #s-2:checked ~ .s-content__trabajos {
-  transform: translateX(-10%); }
-
-.s-type-1 #s-2:checked ~ .s-control .s-c-2 {
-  background-color: #333; }
-
-.s-type-1 #s-2:checked ~ .s-trabajo .s-trabajo-2 {
-  display: block; }
-
-.s-type-1 #s-3:checked ~ .s-content__trabajos {
-  transform: translateX(-20%); }
-
-.s-type-1 #s-3:checked ~ .s-control .s-c-3 {
-  background-color: #333; }
-
-.s-type-1 #s-3:checked ~ .s-trabajo .s-trabajo-3 {
-  display: block; }
-
-.s-type-1 #s-4:checked ~ .s-content__trabajos {
-  transform: translateX(-30%); }
-
-.s-type-1 #s-4:checked ~ .s-control .s-c-4 {
-  background-color: #333; }
-
-.s-type-1 #s-4:checked ~ .s-trabajo .s-trabajo-4 {
-  display: block; }
-
-.s-type-1 #s-5:checked ~ .s-content__trabajos {
-  transform: translateX(-40%); }
-
-.s-type-1 #s-5:checked ~ .s-control .s-c-5 {
-  background-color: #333; }
-
-.s-type-1 #s-5:checked ~ .s-trabajo .s-trabajo-5 {
-  display: block; }
-
-.s-type-1 #s-6:checked ~ .s-content__trabajos {
-  transform: translateX(-50%); }
-
-.s-type-1 #s-6:checked ~ .s-control .s-c-6 {
-  background-color: #333; }
-
-.s-type-1 #s-6:checked ~ .s-trabajo .s-trabajo-6 {
-  display: block; }
-
-.s-type-1 #s-7:checked ~ .s-content__trabajos {
-  transform: translateX(-60%); }
-
-.s-type-1 #s-7:checked ~ .s-control .s-c-7 {
-  background-color: #333; }
-
-.s-type-1 #s-7:checked ~ .s-trabajo .s-trabajo-7 {
-  display: block; }
-
-.s-type-1 #s-8:checked ~ .s-content__trabajos {
-  transform: translateX(-70%); }
-
-.s-type-1 #s-8:checked ~ .s-control .s-c-8 {
-  background-color: #333; }
-
-.s-type-1 #s-8:checked ~ .s-trabajo .s-trabajo-8 {
-  display: block; }
-
-.s-type-1 #s-9:checked ~ .s-content__trabajos {
-  transform: translateX(-80%); }
-
-.s-type-1 #s-9:checked ~ .s-control .s-c-9 {
-  background-color: #333; }
-
-.s-type-1 #s-9:checked ~ .s-trabajo .s-trabajo-9 {
-  display: block; }
-
-.s-type-1 #s-10:checked ~ .s-content__trabajos {
-  transform: translateX(-90%); }
-
-.s-type-1 #s-10:checked ~ .s-control .s-c-10 {
-  background-color: #333; }
-
-.s-type-1 #s-10:checked ~ .s-trabajo .s-trabajo-10 {
-  display: block; }
-
-.logoMain {
-  margin: 5%; }
-  .logoMain .title__trabajos {
-    font-weight: bold;
-    margin: 5% auto;
-    font-size: 25px;
-    text-align: center;
-    max-width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #1C2D49; }
+.grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 90%;
+  grid-gap: 1em;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding: 2em 1em;
+  background: white; }
+  @media all and (min-width: 600px) {
+    .grid {
+      grid-auto-flow: initial;
+      grid-template-columns: repeat(auto-fit, minmax(auto, 20em));
+      justify-content: center; } }
+  .grid__figure {
+    display: grid;
+    grid-template-rows: 15em 1fr;
+    grid-gap: 1em; }
+    .grid__figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
 .s-wrap {
   width: 100%;
@@ -533,7 +247,7 @@ table {
         align-items: center;
         width: 100%;
         height: 50%; }
-        .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link {
+        .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__super, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__ingi, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__corro, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__pro, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__horm, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__indu, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__deco, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__imper, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__edif, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__inect {
           display: block;
           width: 50px;
           height: 50px;
@@ -541,17 +255,75 @@ table {
           background-position: center;
           background-size: cover; }
           @media (min-width: 767px) {
-            .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link {
+            .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__super, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__ingi, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__corro, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__pro, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__horm, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__indu, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__deco, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__imper, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__edif, .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__inect {
               width: 100px;
               height: 100px; } }
       .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link:nth-child(1) {
         background-image: url(/_assets/img/works1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__ingi:nth-child(1) {
+        background-image: url(/_assets/img/ingenieria1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__corro:nth-child(1) {
+        background-image: url(/_assets/img/Anticorrosiva1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__super:nth-child(1) {
+        background-image: url(/_assets/img/superficies1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__pro:nth-child(1) {
+        background-image: url(/_assets/img/protecciones1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__horm:nth-child(1) {
+        background-image: url(/_assets/img/hormigones1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__indu:nth-child(1) {
+        background-image: url(/_assets/img/pavimentos1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__deco:nth-child(1) {
+        background-image: url(/_assets/img/decorativos1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__imper:nth-child(1) {
+        background-image: url(/_assets/img/imper1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__edif:nth-child(1) {
+        background-image: url(/_assets/img/edificios1.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__inect:nth-child(1) {
+        background-image: url(/_assets/img/inect1.jpg); }
       .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link:nth-child(2) {
         background-image: url(/_assets/img/works2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__ingi:nth-child(2) {
+        background-image: url(/_assets/img/ingenieria2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__corro:nth-child(2) {
+        background-image: url(/_assets/img/Anticorrosiva2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__super:nth-child(2) {
+        background-image: url(/_assets/img/superficies2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__pro:nth-child(2) {
+        background-image: url(/_assets/img/protecciones2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__horm:nth-child(2) {
+        background-image: url(/_assets/img/hormigones2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__indu:nth-child(2) {
+        background-image: url(/_assets/img/pavimentos2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__deco:nth-child(2) {
+        background-image: url(/_assets/img/decorativos2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__imper:nth-child(2) {
+        background-image: url(/_assets/img/imper2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__edif:nth-child(2) {
+        background-image: url(/_assets/img/edificios2.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__inect:nth-child(2) {
+        background-image: url(/_assets/img/inect2.jpg); }
       .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link:nth-child(3) {
         background-image: url(/_assets/img/works3.jpg); }
-      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__link:nth-child(4) {
-        background-image: url(/_assets/img/works4.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__ingi:nth-child(3) {
+        background-image: url(/_assets/img/ingenieria3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__corro:nth-child(3) {
+        background-image: url(/_assets/img/Anticorrosiva3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__super:nth-child(3) {
+        background-image: url(/_assets/img/superficies3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__pro:nth-child(3) {
+        background-image: url(/_assets/img/protecciones3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__horm:nth-child(3) {
+        background-image: url(/_assets/img/hormigones3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__indu:nth-child(3) {
+        background-image: url(/_assets/img/pavimentos3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__deco:nth-child(3) {
+        background-image: url(/_assets/img/decorativos3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__imper:nth-child(3) {
+        background-image: url(/_assets/img/imper3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__edif:nth-child(3) {
+        background-image: url(/_assets/img/edificios3.jpg); }
+      .s-wrap .servicios-item .servicios-item__servicio .servicios-item__img__inect:nth-child(3) {
+        background-image: url(/_assets/img/inect3.jpg); }
   .s-wrap .servicios-item-description {
     background-color: #000; }
   .s-wrap .c-galery {
@@ -560,12 +332,12 @@ table {
     height: 100%;
     background-position: center center; }
   .s-wrap .servicios-item-1 {
-    background-image: url("/_assets/img/work1.jpg"); }
+    background-image: url("/_assets/img/works2.jpg"); }
   .s-wrap .servicios-item-2 {
     background-image: url("/_assets/img/works3.jpg");
     position: relative; }
   .s-wrap .servicios-item-3 {
-    background-image: url("/_assets/img/works2.jpg"); }
+    background-image: url("/_assets/img/superficios.jpg"); }
   .s-wrap .servicios-item-4 {
     background-image: url("/_assets/img/works4.jpg"); }
   .s-wrap .servicios-item-5 {
@@ -824,12 +596,18 @@ header {
   list-style: none;
   padding: 16px;
   height: 80px;
+  margin-right: 5%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
   .headerMenu__list a {
-    margin: 15px 5px; }
+    margin: 15px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px; }
 
 a {
   text-decoration: none;
@@ -993,11 +771,11 @@ a {
     height: 100%;
     background-position: center center; }
   .s-wrap .s-item-1 {
-    background-image: url("/_assets/img/work1.jpg"); }
+    background-image: url("/_assets/img/works2.jpg"); }
   .s-wrap .s-item-2 {
     background-image: url("/_assets/img/works3.jpg"); }
   .s-wrap .s-item-3 {
-    background-image: url("/_assets/img/works2.jpg"); }
+    background-image: url("/_assets/img/superficios.jpg"); }
   .s-wrap .s-item-4 {
     background-image: url("/_assets/img/works4.jpg"); }
   .s-wrap .s-item-5 {
@@ -1267,8 +1045,31 @@ a {
       justify-content: center;
       align-items: center;
       height: 40vh; } }
+  @media (min-width: 1025px) {
+    .popup {
+      height: 50vh;
+      max-width: 1024px;
+      margin-top: 105px; } }
   .popup .popups-item-1 {
-    background-image: url("/_assets/img/work1.jpg"); }
+    background-image: url("/_assets/img/works2.jpg"); }
+  .popup .popups-item-2 {
+    background-image: url("/_assets/img/corrosivo.jpg"); }
+  .popup .popups-item-3 {
+    background-image: url("/_assets/img/superficios.jpg"); }
+  .popup .popups-item-4 {
+    background-image: url("/_assets/img/works4.jpg"); }
+  .popup .popups-item-5 {
+    background-image: url("/_assets/img/works5.jpg"); }
+  .popup .popups-item-6 {
+    background-image: url("/_assets/img/works6.jpg"); }
+  .popup .popups-item-7 {
+    background-image: url("/_assets/img/works7.jpg"); }
+  .popup .popups-item-8 {
+    background-image: url("/_assets/img/works8.jpg"); }
+  .popup .popups-item-9 {
+    background-image: url("/_assets/img/works9.jpg"); }
+  .popup .popups-item-10 {
+    background-image: url("/_assets/img/works10.jpg"); }
   .popup .popups-item {
     display: inline-block;
     width: 100%;
@@ -1280,6 +1081,10 @@ a {
     @media (min-width: 767px) {
       .popup .popups-item {
         width: 49%; } }
+    @media (min-width: 1025px) {
+      .popup .popups-item {
+        height: 50vh;
+        width: 100%; } }
     .popup .popups-item .popups-item__text {
       display: block;
       height: 50px;
@@ -1314,6 +1119,9 @@ a {
       width: 100%;
       height: 40vh;
       top: 0; }
+      @media (min-width: 1025px) {
+        .popup .popups-item .popups-item__popup {
+          height: 100%; } }
       .popup .popups-item .popups-item__popup .popups-item__popup__text {
         font-size: 30px;
         max-width: 90%;
@@ -1340,8 +1148,11 @@ a {
         width: 90%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: flex-start; }
+        @media (min-width: 1025px) {
+          .popup .popups-item .popups-item__popup .popups-item__popup-description {
+            height: 100%; } }
         .popup .popups-item .popups-item__popup .popups-item__popup-description .link_popups {
           position: absolute;
           left: 0;
@@ -1356,6 +1167,13 @@ a {
           text-align: left;
           line-height: 20px;
           margin: 5px 0; }
+          @media (min-width: 767px) {
+            .popup .popups-item .popups-item__popup .popups-item__popup-description .apimosa__popups {
+              font-size: 1.5rem; } }
+          @media (min-width: 1025px) {
+            .popup .popups-item .popups-item__popup .popups-item__popup-description .apimosa__popups {
+              font-size: 1.5rem;
+              line-height: 25px; } }
       .popup .popups-item .popups-item__popup .popups-item__img {
         display: flex;
         flex-direction: row;
@@ -1363,7 +1181,7 @@ a {
         align-items: center;
         width: 100%;
         height: 50%; }
-        .popup .popups-item .popups-item__popup .popups-item__img__link {
+        .popup .popups-item .popups-item__popup .popups-item__img__link, .popup .popups-item .popups-item__popup .popups-item__img__super, .popup .popups-item .popups-item__popup .popups-item__img__ingi, .popup .popups-item .popups-item__popup .popups-item__img__corro, .popup .popups-item .popups-item__popup .popups-item__img__pro, .popup .popups-item .popups-item__popup .popups-item__img__horm, .popup .popups-item .popups-item__popup .popups-item__img__indu, .popup .popups-item .popups-item__popup .popups-item__img__deco, .popup .popups-item .popups-item__popup .popups-item__img__imper, .popup .popups-item .popups-item__popup .popups-item__img__edif, .popup .popups-item .popups-item__popup .popups-item__img__inect {
           display: block;
           width: 50px;
           height: 50px;
@@ -1372,18 +1190,79 @@ a {
           background-size: cover; }
       .popup .popups-item .popups-item__popup .popups-item__img__link:nth-child(1) {
         background-image: url(/_assets/img/works1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__ingi:nth-child(1) {
+        background-image: url(/_assets/img/ingenieria1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__corro:nth-child(1) {
+        background-image: url(/_assets/img/Anticorrosiva1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__super:nth-child(1) {
+        background-image: url(/_assets/img/superficies1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__pro:nth-child(1) {
+        background-image: url(/_assets/img/protecciones1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__horm:nth-child(1) {
+        background-image: url(/_assets/img/hormigones1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__indu:nth-child(1) {
+        background-image: url(/_assets/img/pavimentos1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__deco:nth-child(1) {
+        background-image: url(/_assets/img/decorativos1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__imper:nth-child(1) {
+        background-image: url(/_assets/img/imper1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__edif:nth-child(1) {
+        background-image: url(/_assets/img/edificios1.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__inect:nth-child(1) {
+        background-image: url(/_assets/img/inect1.jpg); }
       .popup .popups-item .popups-item__popup .popups-item__img__link:nth-child(2) {
         background-image: url(/_assets/img/works2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__ingi:nth-child(2) {
+        background-image: url(/_assets/img/ingenieria2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__corro:nth-child(2) {
+        background-image: url(/_assets/img/Anticorrosiva2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__super:nth-child(2) {
+        background-image: url(/_assets/img/superficies2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__pro:nth-child(2) {
+        background-image: url(/_assets/img/protecciones2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__horm:nth-child(2) {
+        background-image: url(/_assets/img/hormigones2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__indu:nth-child(2) {
+        background-image: url(/_assets/img/pavimentos2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__deco:nth-child(2) {
+        background-image: url(/_assets/img/decorativos2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__imper:nth-child(2) {
+        background-image: url(/_assets/img/imper2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__edif:nth-child(2) {
+        background-image: url(/_assets/img/edificios2.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__inect:nth-child(2) {
+        background-image: url(/_assets/img/inect2.jpg); }
       .popup .popups-item .popups-item__popup .popups-item__img__link:nth-child(3) {
         background-image: url(/_assets/img/works3.jpg); }
-      .popup .popups-item .popups-item__popup .popups-item__img__link:nth-child(4) {
-        background-image: url(/_assets/img/works4.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__ingi:nth-child(3) {
+        background-image: url(/_assets/img/ingenieria3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__corro:nth-child(3) {
+        background-image: url(/_assets/img/Anticorrosiva3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__super:nth-child(3) {
+        background-image: url(/_assets/img/superficies3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__pro:nth-child(3) {
+        background-image: url(/_assets/img/protecciones3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__horm:nth-child(3) {
+        background-image: url(/_assets/img/hormigones3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__indu:nth-child(3) {
+        background-image: url(/_assets/img/pavimentos3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__deco:nth-child(3) {
+        background-image: url(/_assets/img/decorativos3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__imper:nth-child(3) {
+        background-image: url(/_assets/img/imper3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__edif:nth-child(3) {
+        background-image: url(/_assets/img/edificios3.jpg); }
+      .popup .popups-item .popups-item__popup .popups-item__img__inect:nth-child(3) {
+        background-image: url(/_assets/img/inect3.jpg); }
 
 .popups-item-description {
   background-color: #000; }
   @media (min-width: 767px) {
     .popups-item-description {
       display: inline-block; } }
+  @media (min-width: 1025px) {
+    .popups-item-description {
+      display: block; } }
 
 .popup .close {
   position: absolute;
@@ -1426,6 +1305,11 @@ a {
     .IndexGalery {
       width: 300px;
       height: 230px; } }
+  @media (min-width: 767px) {
+    .IndexGalery {
+      margin: 0;
+      justify-self: center;
+      align-self: center; } }
   .IndexGalery::before {
     content: "GALERIA DE NUESTROS TRABAJOS";
     position: absolute;
@@ -1705,7 +1589,12 @@ footer {
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle, #eaf4fe 0%, #005b97 100%); }
+  background: radial-gradient(circle, #f7f7f7 0%, #005b97 100%); }
+
+main {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right; }
 
 .magrin__conocenos {
   margin-bottom: 5%; }
@@ -1718,13 +1607,15 @@ body {
   margin: 5% 10%; }
   @media (min-width: 767px) {
     .Conocenos {
-      margin: none; } }
-  @media (min-width: 767px) {
-    .Conocenos {
       display: inline-block;
       width: 300px;
       margin: 0 10%;
       height: 250px; } }
+  @media (min-width: 1025px) {
+    .Conocenos {
+      margin: 0;
+      justify-self: center;
+      align-self: center; } }
   .Conocenos .Conocenos__name, .Conocenos .Conocenos__description {
     font-size: 30px;
     margin-bottom: 5%;
@@ -1746,3 +1637,7 @@ body {
       border: 1px solid black;
       padding: 3% 5%;
       color: black; }
+
+.insite {
+  background-image: url(/_assets/img/btn-bg2.png);
+  background-size: cover; }

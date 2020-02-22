@@ -35,6 +35,11 @@ main {
     width: 300px;
     height: 230px;
   }
+  @include mediaQueries(tablet, down) {
+    margin:0;
+    justify-self: center;
+    align-self: center;
+  }
   // Galery Text
   &::before {
     content: "GALERIA DE NUESTROS TRABAJOS";

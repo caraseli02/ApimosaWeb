@@ -34,10 +34,42 @@
       @include flex-box(center,center);
       height:40vh;
     }
+    @include mediaQueries(desktop, down) {
+      height:50vh;
+      max-width: 1024px;
+      margin-top: 105px;
+    }
 
     // IMGS for POPUPS CONTAINERS
     .popups-item-1 {
         background-image: url($image1);
+      }
+    .popups-item-2 {
+        background-image: url($imageCorrosivo);
+      }
+    .popups-item-3 {
+        background-image: url($image3);
+      }
+    .popups-item-4 {
+        background-image: url($image4);
+      }
+    .popups-item-5 {
+        background-image: url($image5);
+      }
+    .popups-item-6 {
+        background-image: url($image6);
+      }
+    .popups-item-7 {
+        background-image: url($image7);
+      }
+    .popups-item-8 {
+        background-image: url($image8);
+      }
+    .popups-item-9 {
+        background-image: url($image9);
+      }
+    .popups-item-10 {
+        background-image: url($image10);
       }
       //Items of each title
       //IMgs and Titles of Service
@@ -52,6 +84,10 @@
 
         @include mediaQueries(tablet, down) {
           width: 49%;
+        }
+        @include mediaQueries(desktop, down) {
+          height: 50vh;
+          width: 100%;
         }
     
         .popups-item__text {
@@ -90,6 +126,10 @@
           width: 100%;
           height: 40vh;
           top: 0;
+
+          @include mediaQueries(desktop, down) {
+            height: 100%;
+          }
           //TITLE
           .popups-item__popup__text {
             font-size: 30px;
@@ -118,7 +158,12 @@
             color: $white;
             margin:0 auto;
             width:90%;
-            @include flex-box(center, flex-start,column);
+            @include flex-box(space-around, flex-start,column);
+
+            @include mediaQueries(desktop, down) {
+              height: 100%;
+            }
+
             .link_popups {
               position: absolute;
               left: 0;
@@ -134,6 +179,14 @@
                 text-align: left;
                 line-height: 20px;
                 margin:5px 0;
+
+                @include mediaQueries(tablet, down) {
+                  font-size: 1.5rem;
+                }
+                @include mediaQueries(desktop, down) {
+                  font-size: 1.5rem;
+                  line-height: 25px;
+                }
             }
           }
           // Imgs of Servicios
@@ -142,7 +195,7 @@
             width: 100%;
             height: 50%;
             // Links for full view
-            &__link {
+            &__link, &__super, &__ingi, &__corro, &__pro, &__horm, &__indu, &__deco, &__imper, &__edif, &__inect {
               display: block;
               width: 50px;
               height: 50px;
@@ -152,9 +205,39 @@
             }
           }
           // Loop for bg images
-          @for $t from 1 through 4 {
+          @for $t from 1 through 3 {
             .popups-item__img__link:nth-child(#{$t}) {
               background-image: url(/_assets/img/works#{$t}.jpg);
+            }
+            .popups-item__img__ingi:nth-child(#{$t}) {
+              background-image: url(/_assets/img/ingenieria#{$t}.jpg);
+            }
+            .popups-item__img__corro:nth-child(#{$t}) {
+              background-image: url(/_assets/img/Anticorrosiva#{$t}.jpg);
+            }
+            .popups-item__img__super:nth-child(#{$t}) {
+              background-image: url(/_assets/img/superficies#{$t}.jpg);
+            }
+            .popups-item__img__pro:nth-child(#{$t}) {
+              background-image: url(/_assets/img/protecciones#{$t}.jpg);
+            }
+            .popups-item__img__horm:nth-child(#{$t}) {
+              background-image: url(/_assets/img/hormigones#{$t}.jpg);
+            }
+            .popups-item__img__indu:nth-child(#{$t}) {
+              background-image: url(/_assets/img/pavimentos#{$t}.jpg);
+            }
+            .popups-item__img__deco:nth-child(#{$t}) {
+              background-image: url(/_assets/img/decorativos#{$t}.jpg);
+            }
+            .popups-item__img__imper:nth-child(#{$t}) {
+              background-image: url(/_assets/img/imper#{$t}.jpg);
+            }
+            .popups-item__img__edif:nth-child(#{$t}) {
+              background-image: url(/_assets/img/edificios#{$t}.jpg);
+            }
+            .popups-item__img__inect:nth-child(#{$t}) {
+              background-image: url(/_assets/img/inect#{$t}.jpg);
             }
           }
         }
@@ -166,6 +249,9 @@
       
       @include mediaQueries(tablet, down) {
         display: inline-block;
+      }
+      @include mediaQueries(desktop, down) {
+        display: block;
       }
   }
   

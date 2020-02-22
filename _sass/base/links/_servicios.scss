@@ -3,16 +3,6 @@ $switch-speed: 1s;
 $slider-number: 10;
 $slider-width: 100% / $slider-number;
 
-$image1: "/_assets/img/work1.jpg";
-$image2: "/_assets/img/works3.jpg";
-$image3: "/_assets/img/works2.jpg";
-$image4: "/_assets/img/works4.jpg";
-$image5: "/_assets/img/works5.jpg";
-$image6: "/_assets/img/works6.jpg";
-$image7: "/_assets/img/works7.jpg";
-$image8: "/_assets/img/works8.jpg";
-$image9: "/_assets/img/works9.jpg";
-$image10: "/_assets/img/works10.jpg";
 
 .s-wrap {
   width: 100%;
@@ -148,7 +138,7 @@ $image10: "/_assets/img/works10.jpg";
         @include flex-box(space-around, center);
         width: 100%;
         height: 50%;
-        &__link {
+        &__link, &__super, &__ingi, &__corro, &__pro, &__horm, &__indu, &__deco, &__imper, &__edif, &__inect {
           display: block;
           width: 50px;
           height: 50px;
@@ -162,9 +152,39 @@ $image10: "/_assets/img/works10.jpg";
           }
         }
       }
-      @for $t from 1 through 4 {
+      @for $t from 1 through 3 {
         .servicios-item__img__link:nth-child(#{$t}) {
           background-image: url(/_assets/img/works#{$t}.jpg);
+        }
+        .servicios-item__img__ingi:nth-child(#{$t}) {
+          background-image: url(/_assets/img/ingenieria#{$t}.jpg);
+        }
+        .servicios-item__img__corro:nth-child(#{$t}) {
+          background-image: url(/_assets/img/Anticorrosiva#{$t}.jpg);
+        }
+        .servicios-item__img__super:nth-child(#{$t}) {
+          background-image: url(/_assets/img/superficies#{$t}.jpg);
+        }
+        .servicios-item__img__pro:nth-child(#{$t}) {
+          background-image: url(/_assets/img/protecciones#{$t}.jpg);
+        }
+        .servicios-item__img__horm:nth-child(#{$t}) {
+          background-image: url(/_assets/img/hormigones#{$t}.jpg);
+        }
+        .servicios-item__img__indu:nth-child(#{$t}) {
+          background-image: url(/_assets/img/pavimentos#{$t}.jpg);
+        }
+        .servicios-item__img__deco:nth-child(#{$t}) {
+          background-image: url(/_assets/img/decorativos#{$t}.jpg);
+        }
+        .servicios-item__img__imper:nth-child(#{$t}) {
+          background-image: url(/_assets/img/imper#{$t}.jpg);
+        }
+        .servicios-item__img__edif:nth-child(#{$t}) {
+          background-image: url(/_assets/img/edificios#{$t}.jpg);
+        }
+        .servicios-item__img__inect:nth-child(#{$t}) {
+          background-image: url(/_assets/img/inect#{$t}.jpg);
         }
       }
     }

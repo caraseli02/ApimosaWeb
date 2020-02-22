@@ -110,9 +110,13 @@ header {
 	list-style: none;
     padding: 16px;
     height: 80px;
+    margin-right: 5%;
     @include flex-box;
 	a {
-		margin:15px 5px;
+        margin:15px 5px;
+        @include flex-box;
+        height: 50px;
+        
 	}
 }
 a {

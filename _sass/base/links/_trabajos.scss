@@ -2,327 +2,50 @@
 // +++++++ $ENLACES ++++++
 // *****************************
 
-$switch-speed: 1s;
-$slider-number: 10;
-$slider-width: 100% / $slider-number;
-
-$image1: "/_assets/img/work1.jpg";
-$image2: "/_assets/img/works3.jpg";
-$image3: "/_assets/img/works2.jpg";
-$image4: "/_assets/img/works4.jpg";
-$image5: "/_assets/img/works5.jpg";
-$image6: "/_assets/img/works6.jpg";
-$image7: "/_assets/img/works7.jpg";
-$image8: "/_assets/img/works8.jpg";
-$image9: "/_assets/img/works9.jpg";
-$image10: "/_assets/img/works10.jpg";
-
-.s-wrap {
+//Title
+.title__trabajos {
   width: 100%;
-  height: 40vh;
-  position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  @include flex-box(center, center);
+  font-size: 2em;
+  padding-top: 3%;
+  background: #fff;
+  
+  @include mediaQueries(tablet, down) {
+    font-size: 3em;
+  }
+}
 
-  > input {
-    display: none;
+// --------------------------
+// Grid styles
+// --------------------------
+.grid {
+  display: grid;
+  grid-auto-flow: column; // display the items in columns only, ie horizontal
+  grid-auto-columns: 90%; // create as many columns as there are items. 90% so we can see next item on the right.
+  grid-gap: 1em;
+  overflow-x: scroll; // scroll only within the grid, not entire page
+  -webkit-overflow-scrolling: touch; // better scrolling on touch
+  padding: 2em 1em;
+  background: white;
+
+  @media all and (min-width: 600px) {
+    grid-auto-flow: initial; // default: display items in rows and cols
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(auto, 20em)
+    ); // as many columns with max-width of 20em;
+    justify-content: center; // center the items - this is optional
   }
 
-  .s-content {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% * $slider-number;
-    height: 40vh;
-    font-size: 0;
-    list-style: none;
-    transition: transform $switch-speed;
-  }
-  .s-content__trabajos {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 40vh;
-    left: 0;
-    width: 100% * $slider-number;
-    height: 30vh;
-    font-size: 0;
-    list-style: none;
-    transition: transform $switch-speed;
+  &__figure {
+    display: grid;
+    grid-template-rows: 15em 1fr; // 15em high row for image – value could be whatever
+    grid-gap: 1em;
 
-    @include mediaQueries(tablet, down) {
-      
-    }
-  }
-
-  .trabajos-item {
-    display: inline-block;
-    width: $slider-width;
-    height: 40vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-
-    @include mediaQueries(tablet, down) {
-      
-    }
-
-    .trabajos-item__text {
-      display: block;
-      height: 50px;
-      position: absolute;
-      bottom: 15%;
-      left: 5%;
-      color: White;
-
-      .trabajos-item__text__title {
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 20px;
-        margin-bottom: 2.5%;
-        padding: 5px;
-        position: relative;
-        cursor: pointer;
-        .link_servicios {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .trabajos-item__text__description {
-        background-color: rgba(0, 0, 0, 0.75);
-        font-size: 16px;
-        padding: 5px;
-        transform: translate(10px, 0);
-      }
-    }
-    .trabajos-item__trabajo {
-      @include flex-box(center, center, column);
-      position: absolute;
+    img {
       width: 100%;
-      height: 30vh;
-      top: 0;
-
-      @include mediaQueries(tablet, down) {
-        height: 40vh;
-      }
-
-      .trabajos-item__trabajo__text {
-        color: $txt;
-        font-size: 30px;
-        max-width: 100%;
-        max-height: 80%;
-        padding: 5px;
-        position: relative;
-        text-align: center;
-        color: $txt;
-        font-weight: bold;
-        background-color: rgba($color: #ffffff, $alpha: 0.5);
-        border:0.5px solid $txt;;
-        .link_servicios {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .trabajos-item__trabajo-description {
-        color: $txt;
-        font-size: 20px;
-        max-width: 100%;
-        max-height: 80%;
-        padding: 5px;
-        position: relative;
-        text-align: center;
-        color: $white;
-        cursor: pointer;
-
-        @include mediaQueries(tablet, down) {
-          font-size: 1.5rem;
-        }
-        
-        .link_servicios {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .trabajos-item__img {
-        @include flex-box(space-around, center);
-        width: 100%;
-        height: 50%;
-        &__link {
-          display: block;
-          width: 50px;
-          height: 50px;
-          background-color: #000;
-          background-position: center;
-          background-size: cover;
-
-          @include mediaQueries(tablet, down) {
-            width: 100px;
-            height: 100px;
-          }
-        }
-      }
-      @for $t from 1 through 4 {
-        .trabajos-item__img__link:nth-child(#{$t}) {
-          background-image: url(/_assets/img/works#{$t}.jpg);
-        }
-      }
+      height: 100%;
+      object-fit: cover; // crop image within its cell
     }
-  }
-  .trabajos-item-description {
-    background-color: #000;
-  }
-  // IMG for conocenos
-  .c-galery {
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-  }
-  .trabajos-item-1 {
-    background-image: url($image1);
-  }
-  .trabajos-item-2 {
-    background-image: url($image2);
-    position: relative;
-  }
-  .trabajos-item-3 {
-    background-image: url($image3);
-  }
-  .trabajos-item-4 {
-    background-image: url($image4);
-  }
-  .trabajos-item-5 {
-    background-image: url($image5);
-  }
-  .trabajos-item-6 {
-    background-image: url($image6);
-  }
-  .trabajos-item-7 {
-    background-image: url($image7);
-    position: relative;
-  }
-  .trabajos-item-8 {
-    background-image: url($image8);
-  }
-  .trabajos-item-9 {
-    background-image: url($image9);
-  }
-  .trabajos-item-10 {
-    background-image: url($image10);
-  }
-}
-
-.s-type-1 {
-  .s-control {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    transition-timing-function: ease-out;
-
-    > label[class^="s-c-"] {
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      margin-right: 10px;
-      border-radius: 50%;
-      border: 1px solid #999;
-      background-color: #efefe8;
-      cursor: pointer;
-    }
-  }
-
-  .s-trabajo label {
-    display: none;
-    position: absolute;
-    top: calc(50% - 23px);
-    padding: 5px 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.15);
-
-    @include mediaQueries(tablet, down) {
-      top: calc(40vh - 0px);
-    }
-
-    &::before,
-    &::after {
-      content: "";
-      display: block;
-      width: 8px;
-      height: 24px;
-      background-color: $white;
-      margin: 0 10px;
-    }
-
-    &::before {
-      margin-bottom: -12px;
-    }
-
-    &.left {
-      left: 20px;
-
-      &::before {
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
-    }
-
-    &.right {
-      right: 20px;
-
-      &::before {
-        transform: rotate(-45deg);
-      }
-
-      &::after {
-        transform: rotate(45deg);
-      }
-    }
-  }
-
-  @for $i from 1 through $slider-number {
-    #s-#{$i}:checked {
-      & ~ .s-content__trabajos {
-        transform: translateX(-$slider-width * ($i - 1));
-      }
-
-      & ~ .s-control .s-c-#{$i} {
-        background-color: #333;
-      }
-
-      & ~ .s-trabajo .s-trabajo-#{$i} {
-        display: block;
-      }
-    }
-  }
-}
-
-.logoMain {
-  margin: 5%;
-
-  .title__trabajos{
-    font-weight: bold;
-    margin:5% auto;
-    font-size: 25px;
-    text-align: center;
-    max-width: 80%;
-    @include flex-box(center, center);
-    color:$txt;
   }
 }
