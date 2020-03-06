@@ -36,10 +36,13 @@
       crossorigin="anonymous"
     />
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="/js/index.js"></script>
+
     <!-- Nuestro CSS Compilado -->
     <link rel="stylesheet" href="css/estilos.css" />
   </head>
-  <body>
+  <body class="bg_contact">
     <header>
       <!-- Logo -->
       <a class="headerLogo" href="index.html"
@@ -61,7 +64,15 @@
         </div>
       </div>
     </header>
-
+    <body>
+      <form id="formMail" method="post" action="/conocenos.html">
+        <input class="form_name" type="text" placeholder="Nombre" />
+        <input class="form_email" type="text" placeholder="Email" />
+        <input class="form_tel" type="text" placeholder="Telefono" />
+        <textarea class="form_info" placeholder="Informacion"></textarea>
+        <input id="sendMail"  type="submit" value="Enviar" />
+      </form>
+    </body>
 
     <footer>
       <!--
