@@ -2018,6 +2018,14 @@
 		"oAP": "/contactar.html",
 		"oF": 0
 		},
+	"/Cookies.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/Cookies.html",
+		"oF": 0
+		},
 	"/css/estilos.css": {
 		"aP": 1,
 		"bl": 0,
@@ -2034,6 +2042,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/index.html",
+		"oF": 0
+		},
+	"/Privacy.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/Privacy.html",
 		"oF": 0
 		},
 	"/README.md": {
@@ -2061,6 +2077,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/servicios.html",
+		"oF": 0
+		},
+	"/terms.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/terms.html",
 		"oF": 0
 		},
 	"/trabajos.html": {

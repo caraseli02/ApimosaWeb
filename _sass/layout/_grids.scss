@@ -95,7 +95,7 @@ footer {
   display: grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 50px 50px 135px 100px 100px 75px  75px 220px;
+  grid-template-rows: 50px 50px 50px 50px 150px 150px 150px 175px  75px 220px;
   grid-template-areas:
     "NrTelefono NrTelefono NrTelefono"
     "fax fax fax"
@@ -112,7 +112,7 @@ footer {
   @include mediaQueries(tablet, down) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px 180px 80px 150px;
+    grid-template-rows: 50px 50px 250px 80px 150px;
     grid-template-areas:
       "NrTelefono mail redes"
       "fax mail redes"
@@ -194,12 +194,12 @@ footer {
   .location {
     grid-area: Maps;
     @include flex-box;
+    
     @include mediaQueries(tablet, down) {
       @include flex-box(center, center,column);
     }
     &__txt {
-      width: 150px;
-      height: 115px;
+      
       font-size: 20px;
       font-weight: bold;
       @include flex-box(flex-start, center);
@@ -250,7 +250,6 @@ footer {
   .locationMalaga {
     grid-area: Maps3;
     @include flex-box;
-    
     @include mediaQueries(tablet, down) {
       @include flex-box(center, center,column);
 

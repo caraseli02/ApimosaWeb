@@ -47,7 +47,7 @@ html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
+small, strike, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -1429,14 +1429,14 @@ footer {
   display: grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 50px 50px 50px 50px 135px 100px 100px 75px  75px 220px;
+  grid-template-rows: 50px 50px 50px 50px 150px 150px 150px 175px  75px 220px;
   grid-template-areas: "NrTelefono NrTelefono NrTelefono" "fax fax fax" "mail mail mail" "redes redes redes" "Maps Maps Maps" "Maps2 Maps2 Maps2" "Maps3 Maps3 Maps3" "Certification Certification Certification" "Certification2 Certification2 Certification2" "Links Links Links";
   grid-gap: 20px; }
   @media (min-width: 767px) {
     footer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 50px 50px 180px 80px 150px;
+      grid-template-rows: 50px 50px 250px 80px 150px;
       grid-template-areas: "NrTelefono mail redes" "fax mail redes" "Maps Maps2 Maps3 " "Certification . Certification2" "Links Links Links"; } }
   footer .fax {
     display: flex;
@@ -1515,8 +1515,6 @@ footer {
         justify-content: center;
         align-items: center; } }
     footer .location__txt {
-      width: 150px;
-      height: 115px;
       font-size: 20px;
       font-weight: bold;
       display: flex;
@@ -1720,3 +1718,36 @@ main {
 .insite {
   background-image: url(/_assets/img/btn-bg2.png);
   background-size: cover; }
+
+.legal {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: start;
+  flex-direction: column; }
+  .legal > h1 {
+    font-size: 2rem;
+    margin: 1.5rem 0; }
+  .legal > h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.55rem 0; }
+  .legal > p {
+    display: block;
+    margin: 0.45rem 0;
+    text-align: justify; }
+  .legal > ul {
+    display: block;
+    margin: 0.35rem 0;
+    text-align: justify;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column; }
+    .legal > ul > li {
+      margin: 0.45rem 0;
+      text-align: justify; }
+
+.legal__title {
+  font-size: 2rem;
+  margin: 0.5rem; }
