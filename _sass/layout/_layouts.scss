@@ -21,6 +21,10 @@ main{
     }
 }
 .Conocenos{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
     margin:5% 10%;
     @include mediaQueries(tablet, down) {
@@ -35,7 +39,8 @@ main{
         align-self: center;
     }
     
-    .Conocenos__name{
+    h1.Conocenos__name{
+        display: block;
         font-size: 30px;
         margin-bottom: 5%;
         color: $black;

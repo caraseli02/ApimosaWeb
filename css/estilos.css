@@ -640,7 +640,7 @@ bigcircle {
   margin-top: 200px;
   border-radius: 50%; }
 
-h1 {
+.formTitle {
   font-size: 30px;
   color: #fff;
   font-family: sans-serif;
@@ -1677,6 +1677,10 @@ main {
       margin-bottom: 0; } }
 
 .Conocenos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   margin: 5% 10%; }
   @media (min-width: 767px) {
@@ -1690,7 +1694,8 @@ main {
       margin: 0;
       justify-self: center;
       align-self: center; } }
-  .Conocenos .Conocenos__name, .Conocenos .Conocenos__description {
+  .Conocenos h1.Conocenos__name, .Conocenos h1.Conocenos__description {
+    display: block;
     font-size: 30px;
     margin-bottom: 5%;
     color: black; }
